@@ -1,0 +1,53 @@
+AWS Lambda - is serverless computing and it eliminating the need to manage the infrastructure and no need to care for scalable capacity. Jus define the function and rest will be taken care. Integrating one service with other service is typically easy in aws lambda. (each lambda function runs on it's own container)
+
+Upload any aws lambda function code in lambda and lambda function will run when it'll be triggered by any other aws service events like s3.
+
+Scenarios to trigger the lambda function to run:
+
+1. 	file changes in s3 bucket
+2. email sending
+3. pushing notification
+
+Lambda function structure:
+
+1. Handler
+		def handler_function(event, context):
+			return result 
+			
+		event - Object which trigger the lambda function
+		context - It'll provide the runtime information to handler
+2. Trigger - Creating some s3 or other services to trigger.
+
+
+Method to create the lambda function and trigger point:
+
+1. Creating the s3 bucket in s3 service
+2. creating some suitable roles and policies.
+3. creating lambda function and attaching the policies
+4. Add a trigger for the lambda function 
+5. Add a code to the lambda function.
+
+Disadvantages of cloud:
+
+Possibility of data leakage
+Restricted some limited features.
+However hosting or storing in some public location.
+Pay to use.
+
+
+-------------------------------------------------
+
+AWS S3
+
+Used for storage and object based. Log files, images, docs, compressed files, documents.
+
+
+-------------------------------
+
+AWS EC2
+
+1. choose image type (AMI - amazon machine image)
+2. choose instance type - cpu, memory RAM, EBS storage, 
+3. Choose configuration
+4. Add storage
+5. Tag & security group 
